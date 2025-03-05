@@ -1,0 +1,240 @@
+/* styles.css */
+
+/* Reset and Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #34495e;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #4a6572;
+}
+
+/* Flash Messages */
+.flash-messages {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.flash-success, .flash-info, .flash-warning, .flash-error {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #b3e5ec;
+}
+
+.flash-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Content Area */
+body > div {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+input[type="text"], input[type="submit"], textarea, select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td a {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+td a:hover {
+    color: #c0392b;
+}
+
+p {
+    font-style: italic;
+    color: #777;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+form label {
+    margin: 0;
+    margin-right: 10px;
+}
+
+
+form input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+form button[type="submit"] {
+    background-color: #3498db;
+    border: 2px solid #2c3e50;
+    width: 20vw;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    border: 2px solid #1a242e;
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 10px;
+        text-align: center;
+    }
+
+    /* body > div, .flash-messages {
+        width: 95%;
+    } */
+
+    table, form {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input[type="text"] {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+    }
+
+}
