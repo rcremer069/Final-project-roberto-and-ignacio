@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dictionary</h2>
+
+<form method="POST" action="{{ url_for('dictionary_view') }}">
+  <input type="text" name="search" placeholder="Search..." value="{{ query|default('') }}">
+  <button type="submit">Search</button>
+</form>
+
+{% if words %}
+  <table>
+    <tr>
+      <th>English</th>
+      <th>Swiss German</th>
+      <th>Action</th>
+    </tr>
+    {% for row in words %}
+    <tr>
+      <td>{{ row['en'] }}</td>
+      <td>{{ row['de'] }}</td>
+      <td>
+        <a href="{{ url_for('delete_word', row_id=loop.index0) }}"
+           onclick="return confirm('Delete this word?');">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>No words found.</p>
+{% endif %}
+{% endblock %}
